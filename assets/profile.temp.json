@@ -1,0 +1,211 @@
+{
+    "widget": [
+        {
+            "type": 1,
+            "title": "Blog",
+            "description": "Aristra Hatsuyu",
+            "color": "#aca3f2",
+            "icon": "feather",
+            "image": "images/blog.jpg",
+            "link": "https://blog.aristra.top",
+            "columns": 4,
+            "row": 2
+        },
+        {
+            "type": 1,
+            "title": "GitHub",
+            "description": "AristraHatsuyu",
+            "color": "#202328",
+            "icon": "fa-brands fa-github",
+            "link": "https://github.com/AristraHatsuyu",
+            "columns": 2,
+            "row": 2
+        },
+        {
+            "type": 1,
+            "title": "Enterprise",
+            "description": "FLYour",
+            "color": "#59b7f4",
+            "icon": "building",
+            "link": "https://www.flyour.cn",
+            "columns": 2,
+            "row": 2
+        },
+        {
+            "type": 1,
+            "title": "Discord",
+            "description": "@Aristrafly",
+            "color": "#5b64ea",
+            "icon": "fa-brands fa-discord",
+            "link": "https://discord.com/users/1357313495296774224",
+            "columns": 2,
+            "row": 2
+        },
+        {
+            "type": 1,
+            "title": "Instagram",
+            "description": "@Aristrafly",
+            "color": "#2dbccc",
+            "icon": "fa-brands fa-instagram",
+            "link": "https://www.instagram.com/aristrafly",
+            "columns": 2,
+            "row": 2
+        },
+        {
+            "type": 2,
+            "image": "https://githubcard.aristra.top/api/stats?username=AristraHatsuyu",
+            "columns": 4,
+            "row": 2
+        },
+        {
+            "type": 3,
+            "columns": 5,
+            "row": 2,
+            "mrow": 2
+        },
+        {
+            "type": 1,
+            "title": "Email",
+            "description": "admin@flyour.cn",
+            "color": "#3576d2",
+            "icon": "envelope",
+            "link": "mailto:admin@flyour.cn",
+            "columns": 3,
+            "row": 1,
+            "mcolumns": 2,
+            "mrow": 2
+        },
+        {
+            "type": 2,
+            "image": "images/widget.jpeg",
+            "left": 100,
+            "top": 65,
+            "scale": "220%",
+            "zoom": true,
+            "columns": 3,
+            "row": 3,
+            "mcolumns": 2,
+            "mrow": 2
+        },
+        {
+            "type": 5,
+            "data": [
+                {
+                    "title": "桜樹街道",
+                    "author": "Kozato Snow",
+                    "file": "/media/桜樹街道.flac",
+                    "image": "/media/桜樹街道.jpg"
+                },
+                {
+                    "title": "群青",
+                    "author": "YOASOBI",
+                    "file": "/media/群青.mp3",
+                    "image": "/media/群青.jpg",
+                    "lyrics": "/media/群青.lyntrics.json"
+                }
+            ],
+            "columns": 2,
+            "row": 2
+        },
+        {
+            "type": 4,
+            "url": "https://aristra.top/count/",
+            "columns": 3,
+            "row": 2,
+            "mcolumns": 2,
+            "mrow": 2
+        }
+    ],
+    "project": [
+        {
+            "title": "FLYour",
+            "description": "Build A World of Dream",
+            "link": "https://www.flyour.cn/"
+        },
+        {
+            "title": "FLYour BBS",
+            "description": "FLYour Official Community"
+        },
+        {
+            "title": "FLYour Pass",
+            "description": "FLYour User System"
+        },
+        {
+            "title": "FLYour IOT",
+            "description": "FLYour Hardware Platform"
+        },
+        {
+            "title": "Lyntrix",
+            "description": "Redefining Digital Presence"
+        },
+        {
+            "title": "Starmisty",
+            "description": "Star Domain Mystery"
+        },
+        {
+            "title": "FLY-MiX",
+            "description": "Sculpting Sonic Dreams"
+        },
+        {
+            "title": "FLYour Edu",
+            "description": "FLYour Educational Platform"
+        }
+    ],
+    "background": [
+        {
+            "title": "Sky & Ocean",
+            "image": "/background/01.jpg",
+            "url": "https://bbs.flyour.cn/"
+        },
+        {
+            "title": "Mountain",
+            "image": "/background/02.jpg"
+        },
+        {
+            "title": "河川敷",
+            "image": "/background/03.jpg",
+            "url": "https://www.pixiv.net/artworks/38185102"
+        },
+        {
+            "title": "無題",
+            "image": "/background/04.jpg",
+            "url": "https://www.pixiv.net/artworks/119509178"
+        },
+        {
+            "title": "dusk dream",
+            "image": "/background/05.jpg",
+            "url": "https://www.pixiv.net/artworks/115928014"
+        },
+        {
+            "title": "moment of solitude",
+            "image": "/background/06.jpg",
+            "url": "https://www.pixiv.net/artworks/123508291"
+        },
+        {
+            "title": "summer has come !",
+            "image": "/background/07.jpg",
+            "highbg": true,
+            "url": "https://www.pixiv.net/artworks/69618131"
+        },
+        {
+            "title": "藍調時刻",
+            "image": "/background/08.jpg",
+            "url": "https://www.pixiv.net/artworks/120392078"
+        },
+        {
+            "title": "On the way Home",
+            "image": "/background/09.jpg",
+            "url": "https://www.pixiv.net/artworks/96552364"
+        },
+        {
+            "title": "空鏡",
+            "image": "/background/10.jpg",
+            "url": "https://www.pixiv.net/artworks/77278947"
+        },
+        {
+            "title": "夏の終わり",
+            "image": "/background/11.jpg",
+            "url": "https://www.pixiv.net/artworks/127935518"
+        }
+    ]
+}
