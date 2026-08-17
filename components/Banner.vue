@@ -1,7 +1,7 @@
 <template>
     <div class="banner">
         <div class="avatar">
-            <img draggable="false" src="@/public/images/avatar.jpg" alt="头像" />
+            <img draggable="false" src="/images/avatar.jpg" alt="头像" />
         </div>
         <div class="info">
             <div class="name">
