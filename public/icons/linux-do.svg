@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Linux.do</title>
+  <rect x="7" y="9" width="50" height="46" rx="12" fill="#fff"/>
+  <circle cx="18" cy="20" r="2.5" fill="#5b64ea"/>
+  <circle cx="26" cy="20" r="2.5" fill="#5b64ea"/>
+  <path d="m17 31 8 6-8 6M31 43h14" fill="none" stroke="#5b64ea" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+</svg>

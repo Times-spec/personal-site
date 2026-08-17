@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>RedNote</title>
+  <rect x="7" y="7" width="50" height="50" rx="16" fill="#f04458"/>
+  <path d="M21 18h17c4.4 0 8 3.6 8 8v10c0 4.4-3.6 8-8 8H29l-8 7v-7h-1c-4.4 0-8-3.6-8-8V26c0-4.4 3.6-8 8-8h1Z" fill="#fff"/>
+  <path d="M24 27v10m-5-5h10m7-5v10m-5-5h10" fill="none" stroke="#f04458" stroke-linecap="round" stroke-width="3"/>
+</svg>

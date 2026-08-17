@@ -9,7 +9,11 @@
                     data-pointer>
                     <div>
                         <div :style="{ 'background-color': data.color }" class="icon">
-                            <font-awesome :icon="data.icon ?? ''" />
+                            <img v-if="data.icon === 'linux-do'" src="/icons/linux-do.svg" class="icon-image"
+                                alt="" aria-hidden="true" />
+                            <img v-else-if="data.icon === 'rednote'" src="/icons/rednote.svg" class="icon-image"
+                                alt="" aria-hidden="true" />
+                            <font-awesome v-else :icon="data.icon ?? ''" />
                         </div>
                         <div>
                             <div class="title">{{ data.title }}</div>
@@ -650,7 +654,7 @@ const handleProjectClick = (event: MouseEvent) => {
                     height: calc(var(--square-size) * 0.66);
                     border-radius: calc(var(--square-size) * 0.18);
 
-                    svg {
+                    svg, .icon-image {
                         color: #ffffff;
                         width: calc(var(--square-size) * 0.3);
                         height: calc(var(--square-size) * 0.3);
@@ -671,7 +675,7 @@ const handleProjectClick = (event: MouseEvent) => {
                             width: calc(var(--square-size) - calc(var(--square-size) / 83.75 * 40));
                             height: calc(var(--square-size) - calc(var(--square-size) / 83.75 * 40));
 
-                            svg {
+                            svg, .icon-image {
                                 width: calc(var(--square-size) * 0.25);
                                 height: calc(var(--square-size) * 0.25);
                             }
