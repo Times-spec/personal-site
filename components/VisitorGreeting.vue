@@ -14,7 +14,7 @@
 const visible = ref(false)
 const city = ref('')
 
-const message = computed(() => city.value ? `嗨，欢迎来自 ${city.value} 的朋友。` : '嗨，欢迎来到我的个人网站。')
+const message = computed(() => city.value ? `👋 嗨，欢迎来自 ${city.value} 的朋友！` : '👋 嗨，欢迎来到我的个人网站！')
 
 onMounted(async () => {
   try {
@@ -48,10 +48,10 @@ onBeforeUnmount(() => {
   color: #f7fbff;
   font-size: 14px;
   line-height: 1.5;
-  background: rgba(23, 27, 31, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(135deg, rgba(177, 96, 55, 0.94), rgba(126, 65, 48, 0.94));
+  border: 1px solid rgba(255, 220, 184, 0.42);
   border-radius: 14px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 12px 35px rgba(102, 48, 28, 0.3);
   backdrop-filter: blur(14px);
 }
 
@@ -59,9 +59,9 @@ onBeforeUnmount(() => {
   flex: 0 0 8px;
   width: 8px;
   height: 8px;
-  background: #8ed0ff;
+  background: #ffd49c;
   border-radius: 50%;
-  box-shadow: 0 0 12px #8ed0ff;
+  box-shadow: 0 0 12px #ffd49c;
 }
 
 .visitor-greeting__close {
