@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<Props>(), {
     url: ""
 });
 
-const countnum = reactive(['-', '-', '-', '-', '-', '-']);
+const countnum = reactive(['0', '0', '0', '0', '0', '0']);
 
 onMounted(() => {
     if (!props.url) {

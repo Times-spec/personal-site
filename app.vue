@@ -3,6 +3,7 @@
         <NuxtPage />
         <ModeSwitch />
         <Cursor />
+        <VisitorGreeting />
     </client-only>
 </template>
 
@@ -13,7 +14,7 @@ console.log(
   "background: #E6F2FF; color: #003366; font-size: 16px; font-weight: bold; padding: 6px 12px; border-radius: 0 6px 6px 0;"
 );
 useHead({
-    title: 'Aristra | Matrix',
+    title: 'Times | Matrix',
     meta: [
         { name: 'description', content: "aristra's matrix" },
         { name: 'keywords', content: 'aristra, home, matrix,' },

@@ -3,7 +3,7 @@
         {
             "type": 1,
             "title": "Blog",
-            "description": "Aristra Hatsuyu",
+            "description": "Times",
             "color": "#aca3f2",
             "icon": "feather",
             "image": "images/blog.jpg",
@@ -23,11 +23,11 @@
         },
         {
             "type": 1,
-            "title": "Enterprise",
-            "description": "FLYour",
+            "title": "Notion",
+            "description": "note",
             "color": "#59b7f4",
             "icon": "building",
-            "link": "https://www.flyour.cn",
+            "link": "https://app.notion.com/",
             "columns": 2,
             "row": 2
         },
@@ -109,48 +109,14 @@
         },
         {
             "type": 4,
-            "url": "https://aristra.top/count/",
+            "url": "/api/analytics",
             "columns": 3,
             "row": 2,
             "mcolumns": 2,
             "mrow": 2
         }
     ],
-    "project": [
-        {
-            "title": "FLYour",
-            "description": "Build A World of Dream",
-            "link": "https://www.flyour.cn/"
-        },
-        {
-            "title": "FLYour BBS",
-            "description": "FLYour Official Community"
-        },
-        {
-            "title": "FLYour Pass",
-            "description": "FLYour User System"
-        },
-        {
-            "title": "FLYour IOT",
-            "description": "FLYour Hardware Platform"
-        },
-        {
-            "title": "Lyntrix",
-            "description": "Redefining Digital Presence"
-        },
-        {
-            "title": "Starmisty",
-            "description": "Star Domain Mystery"
-        },
-        {
-            "title": "FLY-MiX",
-            "description": "Sculpting Sonic Dreams"
-        },
-        {
-            "title": "FLYour Edu",
-            "description": "FLYour Educational Platform"
-        }
-    ],
+    "project": [],
     "background": [
         {
             "title": "Sky & Ocean",
