@@ -31,7 +31,22 @@ const props = withDefaults(defineProps<Props>(), {
     url: ""
 });
 
-const countnum = reactive(['0', '0', '0', '0', '0', '0']);
+const INITIAL_VISITOR_COUNT = 100;
+
+const formatCount = (count: number) => Math.max(0, Math.floor(count)).toString().padStart(6, '0').slice(-6);
+const countnum = reactive(formatCount(INITIAL_VISITOR_COUNT).split(''));
+
+const updateCount = (value: unknown) => {
+    const count = Number(value);
+    if (!Number.isFinite(count)) {
+        return;
+    }
+
+    const padded = formatCount(count);
+    for (let i = 0; i < countnum.length; i++) {
+        countnum[i] = padded[i];
+    }
+};
 
 onMounted(() => {
     if (!props.url) {
@@ -44,13 +59,7 @@ onMounted(() => {
     fetch(props.url, { signal: controller.signal })
         .then(res => res.ok ? res.json() : null)
         .then(data => {
-            const count = Number(data?.count);
-            if (!isNaN(count)) {
-                const padded = count.toString().padStart(6, '0');
-                for (let i = 0; i < 6; i++) {
-                    countnum[i] = padded[i];
-                }
-            }
+            updateCount(data?.count);
         })
         .catch(() => { })
         .finally(() => window.clearTimeout(timeout))
