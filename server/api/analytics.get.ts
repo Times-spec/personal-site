@@ -8,6 +8,8 @@ type RedisResponse = {
 
 const INITIAL_VISITOR_COUNT = 100
 const TOTAL_KEY = 'personal-site:analytics:daily-unique-visitors'
+const IP_SET_PREFIX = 'personal-site:ips:'
+const IP_RETENTION_SECONDS = 30 * 24 * 60 * 60 // IP 记录保留 30 天
 
 const redisCommand = async (url: string, token: string, command: unknown[]) => {
   const response = await $fetch<RedisResponse>(url, {
@@ -66,6 +68,7 @@ export default defineEventHandler(async (event) => {
     .slice(0, 32)
 
   const visitorKey = `personal-site:visitor:${day}:${visitorHash}`
+  const ipsKey = `${IP_SET_PREFIX}${day}`
   try {
     await ensureInitialCount(redisUrl, redisToken)
 
@@ -76,6 +79,11 @@ export default defineEventHandler(async (event) => {
 
     if (firstVisit === 'OK') {
       await redisCommand(redisUrl, redisToken, ['INCR', TOTAL_KEY])
+      // 记录当日访问 IP（明文集合，按天归档，保留 30 天）
+      if (ip !== 'unknown') {
+        await redisCommand(redisUrl, redisToken, ['SADD', ipsKey, ip])
+        await redisCommand(redisUrl, redisToken, ['EXPIRE', ipsKey, IP_RETENTION_SECONDS])
+      }
     }
 
     const count = Number(await redisCommand(redisUrl, redisToken, ['GET', TOTAL_KEY]))
