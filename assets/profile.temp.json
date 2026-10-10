@@ -52,9 +52,23 @@
             "row": 2
         },
         {
-            "type": 2,
-            "image": "https://githubcard.aristra.top/api/stats?username=AristraHatsuyu",
-            "columns": 4,
+            "type": 1,
+            "title": "原来如此",
+            "description": "124 篇技术科普",
+            "color": "#e8a13d",
+            "icon": "lightbulb",
+            "link": "https://www.aha.voyager06.tech",
+            "columns": 2,
+            "row": 2
+        },
+        {
+            "type": 1,
+            "title": "AI 绘廉",
+            "description": "AIGC 廉洁文化展",
+            "color": "#c8402e",
+            "icon": "palette",
+            "link": "https://ai-huilian.voyager06.tech",
+            "columns": 2,
             "row": 2
         },
         {

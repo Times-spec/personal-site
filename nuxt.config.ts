@@ -27,7 +27,9 @@ export default defineNuxtConfig({
                 'volume-xmark',
                 'volume-off',
                 'volume-low',
-                'volume-high'
+                'volume-high',
+                'lightbulb',
+                'palette'
             ],
             brands: ['github', 'discord', 'instagram'],
         }
