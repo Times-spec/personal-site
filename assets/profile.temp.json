@@ -2,12 +2,12 @@
     "widget": [
         {
             "type": 1,
-            "title": "Blog",
-            "description": "Times",
-            "color": "#aca3f2",
-            "icon": "feather",
-            "image": "images/blog.jpg",
-            "link": "https://blog.aristra.top",
+            "title": "个人简历",
+            "description": "罗佳晨 · 西南交大通信工程",
+            "color": "#31597f",
+            "icon": "file-lines",
+            "image": "images/resume.svg",
+            "link": "/resume",
             "columns": 4,
             "row": 2
         },

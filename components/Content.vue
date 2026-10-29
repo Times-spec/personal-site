@@ -5,7 +5,7 @@
                 :rows="data.row" :mcolumns="data.mcolumns" :mrows="data.mrow" :infocus="infocus"
                 @dblclick="handleDoubleClick">
                 <a v-if="data.type === 1" :class="{ 'single': data.row < 2 && windowWidth > 880 }" draggable="false"
-                    :href="data.link ? data.link : 'javascript:;'" :target="data.link ? '_blank' : '_self'"
+                    :href="data.link ? data.link : 'javascript:;'" :target="data.link ? (data.link.startsWith('/') ? '_self' : '_blank') : '_self'"
                     data-pointer>
                     <div>
                         <div :style="{ 'background-color': data.color }" class="icon">

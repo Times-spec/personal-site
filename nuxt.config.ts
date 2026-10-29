@@ -29,7 +29,8 @@ export default defineNuxtConfig({
                 'volume-low',
                 'volume-high',
                 'lightbulb',
-                'palette'
+                'palette',
+                'file-lines'
             ],
             brands: ['github', 'discord', 'instagram'],
         }
