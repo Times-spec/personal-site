@@ -10,6 +10,7 @@
                 <h1>罗佳晨</h1>
                 <p class="subtitle">西南交通大学 · 通信工程 本科在读（2025 级）</p>
                 <div class="chips">
+                    <span class="chip-status"><i class="status-dot"></i>正在寻找寒假实习 · AI 产品 / 产品运营方向</span>
                     <span>综合排名 10 / 149</span>
                     <span>平均分 90.23</span>
                     <span>CET-4 · 605 分</span>
@@ -249,6 +250,39 @@ const printPage = () => {
     padding: 4px 12px;
     font-size: 13px;
     font-weight: 600;
+}
+
+.chips span.chip-status {
+    background: #e9f9ef;
+    color: #177245;
+    border-color: #b7e4c7;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.chip-status .status-dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    animation: status-pulse 2.2s ease-out infinite;
+}
+
+@keyframes status-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
 }
 
 section {
