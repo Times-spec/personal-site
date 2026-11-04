@@ -16,6 +16,10 @@
             <div class="bio">
                 <FlipWords :duration="2000" :words="'If not now, when?If not me,who?'" />
             </div>
+            <div class="status" role="status">
+                <span class="status-dot"></span>
+                <span class="status-text">正在寻找寒假实习 · AI 产品 / 产品运营方向</span>
+            </div>
         </div>
     </div>
 </template>
@@ -117,6 +121,33 @@ const displayName = 'Times'
             }
         }
 
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            align-self: flex-start;
+            padding: 7px 14px 7px 11px;
+            border-radius: 999px;
+            font-size: clamp(13px, 2.2vmin, 15px);
+            letter-spacing: 0.02em;
+            color: color-mix(in srgb, var(--lyntrix-color, #fff), #fff 55%);
+            background-color: color-mix(in srgb, var(--lyntrix-color, #fff) 14%, transparent);
+            border: 1px solid color-mix(in srgb, var(--lyntrix-color, #fff) 28%, transparent);
+            backdrop-filter: saturate(1.6) blur(10px);
+            user-select: none;
+            animation: InitAvatar 1s ease 0.9s both;
+
+            .status-dot {
+                flex: none;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #4ade80;
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55);
+                animation: status-pulse 2.2s ease-out infinite;
+            }
+        }
+
         .bio {
             user-select: none;
             opacity: clamp(0.7, 0.75 * var(--scroll-y-percent, 0) + 0.7, 0.85);
@@ -192,6 +223,20 @@ html.dark-mode {
         color: #64beff;
         opacity: 0.8;
         filter: drop-shadow(#64beff 0px 0px 2px) !important;
+    }
+}
+
+@keyframes status-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(74, 222, 128, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
     }
 }
 
