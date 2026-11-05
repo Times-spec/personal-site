@@ -30,6 +30,7 @@
                 <TimeCard v-else-if="data.type === 3" />
                 <AnalyticsCard v-else-if="data.type === 4" :url="data.url" />
                 <MusicCard :data="data.data" :showcard="infocus" v-else-if="data.type === 5 && data.data" />
+                <ProjectsCard :data="data.data" v-else-if="data.type === 6 && data.data" />
             </CardContainer>
         </div>
         <div class="projlist">

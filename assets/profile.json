@@ -53,24 +53,36 @@
             "row": 2
         },
         {
-            "type": 1,
-            "title": "原来如此",
-            "description": "124 篇技术科普",
-            "color": "#e8a13d",
-            "icon": "lightbulb",
-            "link": "https://www.aha.voyager06.tech",
-            "columns": 2,
-            "row": 2
-        },
-        {
-            "type": 1,
-            "title": "AI 绘廉",
-            "description": "AIGC 廉洁文化展",
-            "color": "#c8402e",
-            "icon": "palette",
-            "link": "https://ai-huilian.voyager06.tech",
-            "columns": 2,
-            "row": 2
+            "type": 6,
+            "columns": 4,
+            "row": 2,
+            "data": {
+                "title": "我的项目",
+                "items": [
+                    {
+                        "name": "原来如此",
+                        "desc": "147 篇技术概念科普",
+                        "color": "#e8a13d",
+                        "link": "https://www.aha.voyager06.tech"
+                    },
+                    {
+                        "name": "AI 绘廉",
+                        "desc": "AIGC 廉洁文化展",
+                        "color": "#c8402e",
+                        "link": "https://ai-huilian.voyager06.tech"
+                    },
+                    {
+                        "name": "情投音合",
+                        "desc": "情境音乐推荐 · Off Map 最佳商业潜力奖",
+                        "color": "#7a5fd0"
+                    },
+                    {
+                        "name": "园区 AI 中枢",
+                        "desc": "科创园区智能调度中枢",
+                        "color": "#31597f"
+                    }
+                ]
+            }
         },
         {
             "type": 3,
