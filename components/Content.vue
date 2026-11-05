@@ -18,6 +18,7 @@
                         <div>
                             <div class="title">{{ data.title }}</div>
                             <div class="desc">{{ data.description }}</div>
+                            <div v-if="data.status" class="status"><i class="status-dot"></i><span>{{ data.status }}</span></div>
                         </div>
                     </div>
                     <div v-if="data.image" class="imgcontent" :style="{ 'background-image': `url('${data.image}')` }"
@@ -706,6 +707,27 @@ const handleProjectClick = (event: MouseEvent) => {
                     font-size: calc(var(--square-size) * 0.2);
                     opacity: 0.8;
                 }
+
+                .status {
+                    display: flex;
+                    align-items: center;
+                    gap: calc(var(--square-size) * 0.07);
+                    margin-top: calc(var(--square-size) * 0.07);
+                    font-size: calc(var(--square-size) * 0.165);
+                    font-weight: 600;
+                    line-height: 1.35;
+                    color: #177245;
+
+                    .status-dot {
+                        flex: none;
+                        width: calc(var(--square-size) * 0.09);
+                        height: calc(var(--square-size) * 0.09);
+                        border-radius: 50%;
+                        background-color: #22c55e;
+                        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+                        animation: status-pulse 2s infinite;
+                    }
+                }
             }
 
             .imgcontent {
@@ -980,6 +1002,20 @@ html.perfotp .content {
                 animation-range: entry 0 entry 100px;
             }
         }
+    }
+}
+
+@keyframes status-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
     }
 }
 
