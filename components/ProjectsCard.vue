@@ -1,31 +1,22 @@
 <template>
-    <div class="projects-widget">
+    <div class="projects-widget" data-pointer @click="goList">
         <div class="proj-head">
             <div class="proj-icon">
                 <font-awesome icon="layer-group" />
             </div>
             <div class="proj-title">{{ data.title }}</div>
-            <div class="proj-count">{{ data.items.length }} 个项目</div>
+            <div class="proj-count">{{ data.items.length }} 个项目 · 全部 →</div>
         </div>
         <div class="proj-list">
-            <template v-for="(item, i) in data.items" :key="i">
-                <a v-if="item.link" class="proj-row" :href="item.link"
-                    :target="item.link.startsWith('/') ? '_self' : '_blank'" data-pointer>
-                    <span class="proj-dot" :style="{ 'background-color': item.color }"></span>
-                    <span class="proj-main">
-                        <span class="proj-name">{{ item.name }}</span>
-                        <span class="proj-desc">{{ item.desc }}</span>
-                    </span>
-                    <span class="proj-arrow">→</span>
-                </a>
-                <div v-else class="proj-row">
-                    <span class="proj-dot" :style="{ 'background-color': item.color }"></span>
-                    <span class="proj-main">
-                        <span class="proj-name">{{ item.name }}</span>
-                        <span class="proj-desc">{{ item.desc }}</span>
-                    </span>
-                </div>
-            </template>
+            <NuxtLink v-for="(item, i) in data.items" :key="i" class="proj-row"
+                :to="`/projects/${item.slug}`" data-pointer @click.stop>
+                <span class="proj-dot" :style="{ 'background-color': item.color }"></span>
+                <span class="proj-main">
+                    <span class="proj-name">{{ item.name }}</span>
+                    <span class="proj-desc">{{ item.desc }}</span>
+                </span>
+                <span class="proj-arrow">→</span>
+            </NuxtLink>
         </div>
     </div>
 </template>
@@ -35,6 +26,7 @@ interface ProjectItem {
     name: string
     desc: string
     color: string
+    slug: string
     link?: string
 }
 
@@ -44,6 +36,10 @@ defineProps<{
         items: ProjectItem[]
     }
 }>()
+
+function goList() {
+    navigateTo('/projects')
+}
 </script>
 
 <style lang="scss">
@@ -52,15 +48,16 @@ defineProps<{
     flex-direction: column;
     width: 100%;
     height: 100%;
+    cursor: pointer;
     padding: calc(var(--square-size) * 0.26);
-    padding-bottom: calc(var(--square-size) * 0.2);
+    padding-bottom: calc(var(--square-size) * 0.16);
     box-sizing: border-box;
 
     .proj-head {
         display: flex;
         align-items: center;
         gap: calc(var(--square-size) * 0.12);
-        margin-bottom: calc(var(--square-size) * 0.14);
+        margin-bottom: calc(var(--square-size) * 0.09);
 
         .proj-icon {
             display: flex;
@@ -104,7 +101,7 @@ defineProps<{
         align-items: center;
         gap: calc(var(--square-size) * 0.11);
         color: inherit;
-        padding: calc(var(--square-size) * 0.045) calc(var(--square-size) * 0.06);
+        padding: calc(var(--square-size) * 0.018) calc(var(--square-size) * 0.06);
         margin: 0 calc(var(--square-size) * -0.06);
         border-radius: calc(var(--square-size) * 0.1);
         transition: background-color 0.2s;
@@ -128,13 +125,13 @@ defineProps<{
         }
 
         .proj-name {
-            font-size: calc(var(--square-size) * 0.195);
+            font-size: calc(var(--square-size) * 0.19);
             font-weight: 700;
             white-space: nowrap;
         }
 
         .proj-desc {
-            font-size: calc(var(--square-size) * 0.155);
+            font-size: calc(var(--square-size) * 0.15);
             opacity: 0.75;
             white-space: nowrap;
             overflow: hidden;
@@ -163,6 +160,6 @@ html.dark-mode {
 .content .matrix .widget .projects-widget .proj-row {
     height: auto;
     justify-content: flex-start;
-    padding: calc(var(--square-size) * 0.045) calc(var(--square-size) * 0.06);
+    padding: calc(var(--square-size) * 0.018) calc(var(--square-size) * 0.06);
 }
 </style>
