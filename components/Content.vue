@@ -32,6 +32,16 @@
                 <MusicCard :data="data.data" :showcard="infocus" v-else-if="data.type === 5 && data.data" />
                 <ProjectsCard :data="data.data" v-else-if="data.type === 6 && data.data" />
             </CardContainer>
+            <div class="widget wechat-card" style="--columns: 8; --rows: 2; --m-columns: 4; --m-rows: 2" data-pointer>
+                <div class="wc-text">
+                    <div class="wc-title">微信 · Time flies</div>
+                    <div class="wc-desc">如果你也对 AI 感兴趣，对我很感兴趣，欢迎来和我交流～</div>
+                    <div class="wc-note">扫一扫，添加我为朋友</div>
+                </div>
+                <div class="wc-qr">
+                    <img :src="wechatQr" alt="Times 的微信二维码" draggable="false" />
+                </div>
+            </div>
         </div>
         <div class="projlist">
             <CardContainer v-for="(data, index) in projectdata" :key="index" :infocus="infocus" class="project"
@@ -53,6 +63,7 @@
 
 <script setup lang="ts">
 import config from "@/assets/profile.json"
+import { wechatQr } from "@/assets/wechat-qr"
 import { ref, onMounted, onUnmounted, type IframeHTMLAttributes } from 'vue'
 
 declare global {
@@ -882,6 +893,51 @@ html.dark-mode {
                 &[data-float-item=music],
                 &[data-float-item=image] {
                     border-width: .3em;
+                }
+            }
+        }
+
+
+        .matrix .widget.wechat-card {
+            justify-content: space-between;
+            text-align: left;
+            padding: calc(var(--square-size) * 0.26) calc(var(--square-size) * 0.34);
+            gap: calc(var(--square-size) * 0.3);
+
+            .wc-text {
+                display: flex;
+                flex-direction: column;
+                gap: calc(var(--square-size) * 0.09);
+                min-width: 0;
+            }
+
+            .wc-title {
+                font-size: calc(var(--square-size) * 0.26);
+                font-weight: 700;
+            }
+
+            .wc-desc {
+                font-size: calc(var(--square-size) * 0.175);
+                line-height: 1.65;
+                opacity: 0.85;
+            }
+
+            .wc-note {
+                font-size: calc(var(--square-size) * 0.145);
+                opacity: 0.55;
+            }
+
+            .wc-qr {
+                flex: 0 0 auto;
+                background: #fff;
+                border-radius: calc(var(--square-size) * 0.16);
+                padding: calc(var(--square-size) * 0.09);
+                line-height: 0;
+
+                img {
+                    height: calc(var(--square-size) * 1.5);
+                    width: auto;
+                    display: block;
                 }
             }
         }
