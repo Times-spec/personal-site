@@ -1,18 +1,6 @@
 {
   "widget": [
-    {
-      "type": 1,
-      "title": "个人简历",
-      "description": "罗佳晨 · 西南交大通信工程",
-      "color": "#31597f",
-      "icon": "file-lines",
-      "image": "images/resume.svg",
-      "link": "/resume",
-      "columns": 4,
-      "row": 2,
-      "status": "正在寻找寒假实习 · AI 产品 / 产品运营方向"
-    },
-    {
+        {
       "type": 1,
       "title": "GitHub",
       "description": "Times-spec",
