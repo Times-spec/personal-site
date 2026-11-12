@@ -898,50 +898,6 @@ html.dark-mode {
         }
 
 
-        .matrix .widget.wechat-card {
-            justify-content: space-between;
-            text-align: left;
-            padding: calc(var(--square-size) * 0.26) calc(var(--square-size) * 0.34);
-            gap: calc(var(--square-size) * 0.3);
-
-            .wc-text {
-                display: flex;
-                flex-direction: column;
-                gap: calc(var(--square-size) * 0.09);
-                min-width: 0;
-            }
-
-            .wc-title {
-                font-size: calc(var(--square-size) * 0.26);
-                font-weight: 700;
-            }
-
-            .wc-desc {
-                font-size: calc(var(--square-size) * 0.175);
-                line-height: 1.65;
-                opacity: 0.85;
-            }
-
-            .wc-note {
-                font-size: calc(var(--square-size) * 0.145);
-                opacity: 0.55;
-            }
-
-            .wc-qr {
-                flex: 0 0 auto;
-                background: #fff;
-                border-radius: calc(var(--square-size) * 0.16);
-                padding: calc(var(--square-size) * 0.09);
-                line-height: 0;
-
-                img {
-                    height: calc(var(--square-size) * 1.5);
-                    width: auto;
-                    display: block;
-                }
-            }
-        }
-
         .projlist {
             .project {
                 background: #78c7ff2f;
@@ -1101,4 +1057,50 @@ html.perfotp .content {
         opacity: 0.8;
     }
 }
+
+/* 微信交流卡：扁平顶层选择器，避免被任何作用域嵌套 */
+.content .matrix .widget.wechat-card {
+    justify-content: space-between;
+    text-align: left;
+    padding: calc(var(--square-size) * 0.26) calc(var(--square-size) * 0.34);
+    gap: calc(var(--square-size) * 0.3);
+}
+
+.content .matrix .widget.wechat-card .wc-text {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--square-size) * 0.09);
+    min-width: 0;
+}
+
+.content .matrix .widget.wechat-card .wc-title {
+    font-size: calc(var(--square-size) * 0.26);
+    font-weight: 700;
+}
+
+.content .matrix .widget.wechat-card .wc-desc {
+    font-size: calc(var(--square-size) * 0.175);
+    line-height: 1.65;
+    opacity: 0.85;
+}
+
+.content .matrix .widget.wechat-card .wc-note {
+    font-size: calc(var(--square-size) * 0.145);
+    opacity: 0.55;
+}
+
+.content .matrix .widget.wechat-card .wc-qr {
+    flex: 0 0 auto;
+    background: #fff;
+    border-radius: calc(var(--square-size) * 0.16);
+    padding: calc(var(--square-size) * 0.09);
+    line-height: 0;
+}
+
+.content .matrix .widget.wechat-card .wc-qr img {
+    height: calc(var(--square-size) * 1.5);
+    width: auto;
+    display: block;
+}
+
 </style>
